@@ -53,7 +53,7 @@
     }
 
     .bg-home-desktop {
-        background-image: url("../public/images/headerBgDesktop.png");
+        background-image: url("../public/images/headerBgDesktop.webp");
         background-repeat: no-repeat;
     }
 }

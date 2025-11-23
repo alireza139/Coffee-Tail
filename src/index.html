@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
+    <script type="text/javascript">
+        document.documentElement.classList.toggle(
+            "dark",
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+        );
+    </script>
     <title>Document</title>
 </head>
 
@@ -34,6 +41,12 @@
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
         </symbol>
+
+        <symbol id="chevron-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        </symbol>
+
     </svg>
     <!--End All App Icons -->
 
@@ -52,7 +65,7 @@
                         <ul class="text-base absolute w-52 p-6 space-y-4 text-zinc-700 dark:text-white bg-white
                                  dark:bg-zinc-700 border-t-[3px] border-t-orange-300 rounded-2xl child:transition-colors
                                  child-hover:text-orange-300 child:w-max top-[150%] 
-                                 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all">
+                                 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all delay-75">
                             <li>
                                 <a href="#">قهوه ویژه</a>
                             </li>
@@ -86,14 +99,83 @@
             </nav>
             <div class="flex gap-x-10 items-center text-xl text-orange-200">
                 <div class="flex gap-x-5">
-                    <div>
-                        <svg class="w-8 h-8">
-                            <use xlink:href="#shopping-cart"></use>
+                    <div class="relative group">
+                        <svg class="w-8 h-8 cursor-pointer">
+                            <use href="#shopping-cart"></use>
                         </svg>
+                        <!-- user basket -->
+                        <div class="absolute w-[400px] p-6 space-y-4 text-zinc-700 dark:text-white bg-white
+                                 dark:bg-zinc-700 border-t-[3px] border-t-orange-300 rounded-2xl left-0 top-[150%] 
+                                 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all delay-75">
+                            <!-- card header -->
+                            <div class="flex items-center justify-between text-xs font-DanaMedium">
+                                <span class="text-gray-300 font-DanaMedium">1 مورد</span>
+                                <a href="#" class="flex items-center text-orange-300">
+                                    مشاهده سبد خرید
+                                    <svg class="h-4 w-4">
+                                        <use href="#chevron-left"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <!-- card body -->
+                            <div>
+                                <div class="flex gap-x-2 mt-5 pb-6 border-b border-b-gray-300 dark:border-b-white/10">
+                                    <img src="../public/images/products/p1.png" alt="product image"
+                                        class="w-[120px] h-[120px]">
+                                    <div class="flex flex-col justify-between">
+                                        <h4 class="font-DanaMedium text-zinc-700 dark:text-white text-base">قهوه اسپرسو
+                                            بن
+                                            مانو مدل پریسکا 250 گرمی</h4>
+                                        <div>
+                                            <span class="text-teal-600 text-xs dark:text-emerald-500">14.500 تومان
+                                                تخفیف</span>
+                                            <div class="text-zinc-700 dark:text-white font-DanaDemiBold">
+                                                175,000
+                                                <span class="font-Dana">تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-x-2 mt-5 pb-6 border-b border-b-gray-300 dark:border-b-white/10">
+                                    <img src="../public/images/products/p1.png" alt="product image"
+                                        class="w-[120px] h-[120px]">
+                                    <div class="flex flex-col justify-between">
+                                        <h4 class="font-DanaMedium text-zinc-700 dark:text-white text-base line-clamp-2">قهوه اسپرسو
+                                            بن
+                                            مانو مدل پریسکا 250 گرمی</h4>
+                                        <div>
+                                            <span class="text-teal-600 text-xs dark:text-emerald-500">14.500 تومان
+                                                تخفیف</span>
+                                            <div class="text-zinc-700 dark:text-white font-DanaDemiBold">
+                                                175,000
+                                                <span class="font-Dana">تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card footer -->
+                            <div class="flex items-center justify-between mt-5">
+                                <div>
+                                    <h4 class="font-DanaMedium text-xs text-gray-300 dark:text-emerald-500 line-clamp-2">مبلغ قابل پرداخت</h4>
+                                    <div class="text-zinc-700 dark:text-white font-DanaDemiBold">
+                                        175,000
+                                        <span class="font-Dana">تومان</span>
+                                    </div>
+                                </div>
+                                <button class="bg-teal-600 dark:bg-emerald-500 hover:bg-teal-700 text-white 
+                                               w-[144px] h-14 transition-colors rounded-xl cursor-pointer">ثبت سفارش</button>
+                            </div>
+
+                        </div>
                     </div>
-                    <div>
-                        <svg class="w-8 h-8">
-                            <use xlink:href="#moon"></use>
+                    <div id="toggle-theme">
+                        <svg class="w-8 h-8 inline-block dark:hidden cursor-pointer">
+                            <use href="#moon"></use>
+                        </svg>
+                        <svg class="w-8 h-8 hidden dark:inline-block cursor-pointer">
+                            <use href="#sun"></use>
                         </svg>
                     </div>
                 </div>
@@ -102,7 +184,7 @@
                 <!-- End Divider -->
                 <a class="flex gap-x-2.5 items-center" href="#">
                     <svg class="w-8 h-8">
-                        <use xlink:href="#arrow-left-end-on-rectangle"></use>
+                        <use href="#arrow-left-end-on-rectangle"></use>
                     </svg>
                     ورود | ثبتنام
                 </a>
@@ -110,6 +192,8 @@
         </div>
     </header>
     <!-- End Header -->
+
+    <script src="./app.js"></script>
 </body>
 
 </html>
