@@ -288,7 +288,7 @@
     <!-- Start Mobile Header -->
     <div class="flex md:hidden items-center justify-between h-16 px-4 bg-white dark:bg-zinc-700">
         <div>
-            <svg class="w-6 h-6 text-zinc-700 dark:text-white">
+            <svg class="w-6 h-6 text-zinc-700 dark:text-white bars3">
                 <use href="#bars-3"></use>
             </svg>
         </div>
@@ -306,7 +306,7 @@
         </div>
 
         <!-- offcanvas -->
-        <div class="bg-white dark:bg-zinc-700 min-h-screen fixed z-20 top-0 right-0 w-64 pt-3 px-4">
+        <div class="offcanv bg-white dark:bg-zinc-700 min-h-screen overflow-y-auto fixed z-20 top-0 -right-64 w-64 pt-3 px-4 transition-all">
             <!-- header -->
             <div class="flex justify-between items-center pb-5 mb-6 border-b border-b-gray-300 dark:border-b-white/10">
                 <div class="flex gap-x-3.5">
@@ -317,7 +317,7 @@
                         <use href="#logo-type"></use>
                     </svg>
                 </div>
-                <svg class="w-5 h-5 text-zinc-700 dark:text-white">
+                <svg class="w-5 h-5 text-zinc-700 dark:text-white offcanv-close-btn">
                     <use href="#x-mark"></use>
                 </svg>
             </div>
@@ -333,46 +333,70 @@
                     </a>
                 </li>
 
-                <li class="flex items-center justify-between text-orange-300 h-10 rounded-md">
-                    <a href="#" class="flex gap-x-2">
-                        <svg class="w-5 h-5">
-                            <use href="#shopping-cart"></use>
+                <li>
+                    <div class="flex items-center justify-between">
+                        <a href="#" class="flex gap-x-2">
+                            <svg class="w-5 h-5">
+                                <use href="#shopping-cart"></use>
+                            </svg>
+                            فروشگاه
+                        </a>
+                        <svg class="w-5 h-5 cursor-pointer submenu-btn">
+                            <use href="#chevron-down"></use>
                         </svg>
-                        فروشگاه
-                    </a>
-                    <svg class="w-5 h-5">
-                        <use href="#chevron-down"></use>
-                    </svg>
+                    </div>
+
+                    <!-- submenu -->
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">قهوه ویژه</a>
+                        </li>
+                        <li>
+                            <a href="#">قهوه در سطح جهانی</a>
+                        </li>
+                         <li>
+                            <a href="#">قهوه درجه یک</a>
+                        </li>
+                         <li>
+                            <a href="#">ترکیبات تجاری</a>
+                        </li>
+                         <li>
+                            <a href="#">کپسول قهوه</a>
+                        </li>
+                         <li>
+                            <a href="#">قهوه زینو برزیلی</a>
+                        </li>
+                    </ul>
                 </li>
 
-                <li class="flex items-center justify-between text-orange-300 h-10 rounded-md">
+                <li class="flex items-center justify-between h-10">
                     <a href="#" class="flex gap-x-2">
                         <svg class="w-5 h-5">
-                            <use href="#shopping-cart"></use>
+                            <use href="#briefcase"></use>
                         </svg>
                         دیکشنری
                     </a>
                 </li>
 
-                 <li class="flex items-center justify-between text-orange-300 h-10 rounded-md">
+                <li class="flex items-center justify-between h-10">
                     <a href="#" class="flex gap-x-2">
                         <svg class="w-5 h-5">
-                            <use href="#shopping-cart"></use>
+                            <use href="#document-text"></use>
                         </svg>
                         درباره ما
                     </a>
                 </li>
 
-                 <li class="flex items-center justify-between text-orange-300 h-10 rounded-md">
+                <li class="flex items-center justify-between h-10">
                     <a href="#" class="flex gap-x-2">
                         <svg class="w-5 h-5">
-                            <use href="#shopping-cart"></use>
+                            <use href="#chat-bubble-left"></use>
                         </svg>
                         بلاگ
                     </a>
                 </li>
 
-                 <li class="flex items-center justify-between text-orange-300 h-10 rounded-md">
+                <li class="flex items-center justify-between h-10">
                     <a href="#" class="flex gap-x-2">
                         <svg class="w-5 h-5">
                             <use href="#phone-arrow"></use>
@@ -380,8 +404,6 @@
                         تماس با ما
                     </a>
                 </li>
-
-
             </ul>
 
             <!-- footer -->
@@ -393,7 +415,7 @@
                     ورود | ثبتنام
                 </a>
 
-                <div class="toggle-theme max-w-max">
+                <div class="toggle-theme max-w-max cursor-pointer">
                     <div class="hidden dark:flex items-center gap-x-2">
                         <svg class="w-5 h-5">
                             <use href="#sun"></use>
@@ -419,10 +441,10 @@
         </div>
     </div>
 
-    <!-- Start screen shadow -->
-    <div class="w-screen h-screen md:hidden fixed inset-0 z-10 bg-gray-600/40">
+    <!-- Start overlay -->
+    <div class="overlay overlay-close">
     </div>
-    <!-- End screen shadow -->
+    <!-- End overlay -->
     <!-- End Mobile Header -->
     <script src="./app.js"></script>
 </body>

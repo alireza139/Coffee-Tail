@@ -25,21 +25,21 @@
 
 /* ------------------ Custom Variant ------------------ */
 @custom-variant child {
-  & > * {
-    @slot;
-  }
+    &>* {
+        @slot;
+    }
 }
 
 @custom-variant child-hover {
-  & > *:hover {
-    @slot;
-  }
+    &>*:hover {
+        @slot;
+    }
 }
 
 @custom-variant dark {
-  &:where(.dark *) {
-    @slot;
-  }
+    &:where(.dark *) {
+        @slot;
+    }
 }
 
 /* ------------------ Utilities ------------------ */
@@ -58,7 +58,7 @@
     }
 }
 
-/* ------------------ Base Styles ------------------ */
+/* ------------------ base layer ------------------ */
 @layer base {
     @font-face {
         font-family: "Dana";
@@ -95,4 +95,25 @@
         src: local("Morabba Bold"), url("../public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
         font-display: swap;
     }
+}
+
+/* ------------------ components Styles ------------------ */
+@layer components {
+    .submenu {
+        @apply hidden space-y-3 pr-7 mt-3 text-sm text-zinc-600 dark:text-white
+    }
+
+    .submenu-open {
+        @apply block
+    }
+
+    .overlay-close {
+        @apply hidden invisible
+    }
+
+    .overlay-open {
+        @apply w-screen h-screen md:hidden fixed inset-0 z-10 bg-gray-600/50 backdrop-blur-[3px] visible block
+    }
+
+   
 }
