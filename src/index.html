@@ -287,26 +287,30 @@
 
     <!-- Start Mobile Header -->
     <div class="flex md:hidden items-center justify-between h-16 px-4 bg-white dark:bg-zinc-700">
+        <!-- bars3 -->
         <div>
             <svg class="w-6 h-6 text-zinc-700 dark:text-white bars3">
                 <use href="#bars-3"></use>
             </svg>
         </div>
 
+        <!-- logo type -->
         <div>
             <svg class="text-orange-300 w-[100px] h-10">
                 <use href="#logo-type"></use>
             </svg>
         </div>
 
+        <!-- shopping cart -->
         <div>
-            <svg class="w-6 h-6 text-zinc-700 dark:text-white">
+            <svg class="w-6 h-6 text-zinc-700 dark:text-white shopping-cart-icon">
                 <use href="#shopping-cart"></use>
             </svg>
         </div>
 
         <!-- offcanvas -->
-        <div class="offcanv bg-white dark:bg-zinc-700 min-h-screen overflow-y-auto fixed z-20 top-0 -right-64 w-64 pt-3 px-4 transition-all">
+        <div
+            class="offcanv bg-white dark:bg-zinc-700 h-screen overflow-y-auto fixed z-20 top-0 -right-64 w-64 pt-3 px-4 pb-8 transition-all">
             <!-- header -->
             <div class="flex justify-between items-center pb-5 mb-6 border-b border-b-gray-300 dark:border-b-white/10">
                 <div class="flex gap-x-3.5">
@@ -354,16 +358,16 @@
                         <li>
                             <a href="#">قهوه در سطح جهانی</a>
                         </li>
-                         <li>
+                        <li>
                             <a href="#">قهوه درجه یک</a>
                         </li>
-                         <li>
+                        <li>
                             <a href="#">ترکیبات تجاری</a>
                         </li>
-                         <li>
+                        <li>
                             <a href="#">کپسول قهوه</a>
                         </li>
-                         <li>
+                        <li>
                             <a href="#">قهوه زینو برزیلی</a>
                         </li>
                     </ul>
@@ -438,6 +442,109 @@
                     سبد خرید
                 </a>
             </div>
+        </div>
+
+        <!-- shopping offcanvas -->
+        <div class="shopping-offcanv bg-white dark:bg-zinc-700 h-screen
+            overflow-y-auto fixed z-20 top-0 -left-64 w-64 pt-5 px-4 pb-8 transition-all">
+            <!-- header -->
+            <div class="flex justify-between items-center pb-4 border-b border-b-gray-300 dark:border-b-white/10">
+                <svg class="w-5 h-5 text-zinc-700 dark:text-white shopping-offcanv-close-btn">
+                    <use href="#x-mark"></use>
+                </svg>
+                <span class="text-zinc-700 dark:text-white font-DanaMedium">سبد خرید</span>
+            </div>
+
+            <!-- body -->
+            <div>
+                <div class="flex gap-x-1 mt-5 pb-6 border-b border-b-gray-300 dark:border-b-white/10">
+                    <img src="../public/images/products/p1.png" alt="product image" class="w-[90px] h-[90px]">
+                    <div class="flex flex-col justify-between gap-y-1.5">
+                        <h4 class="font-DanaMedium text-zinc-700 dark:text-white text-xs line-clamp-2">
+                            قهوه اسپرسو
+                            بن
+                            مانو مدل پریسکا 250 گرمی</h4>
+                        <div>
+                            <span class="text-teal-600 text-xs dark:text-emerald-500">14.500 تومان
+                                تخفیف</span>
+                            <div class="text-zinc-700 dark:text-white font-DanaDemiBold">
+                                175,000
+                                <span class="font-Dana text-xs">تومان</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-x-1 mt-5 pb-6 border-b border-b-gray-300 dark:border-b-white/10">
+                    <img src="../public/images/products/p1.png" alt="product image" class="w-[90px] h-[90px]">
+                    <div class="flex flex-col justify-between gap-y-1.5">
+                        <h4 class="font-DanaMedium text-zinc-700 dark:text-white text-xs line-clamp-2">
+                            قهوه اسپرسو
+                            بن
+                            مانو مدل پریسکا 250 گرمی</h4>
+                        <div>
+                            <span class="text-teal-600 text-xs dark:text-emerald-500">14.500 تومان
+                                تخفیف</span>
+                            <div class="text-zinc-700 dark:text-white font-DanaDemiBold">
+                                175,000
+                                <span class="font-Dana text-xs">تومان</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-x-1 mt-5 pb-6 border-b border-b-gray-300 dark:border-b-white/10">
+                    <img src="../public/images/products/p1.png" alt="product image" class="w-[90px] h-[90px]">
+                    <div class="flex flex-col justify-between gap-y-1.5">
+                        <h4 class="font-DanaMedium text-zinc-700 dark:text-white text-xs line-clamp-2">
+                            قهوه اسپرسو
+                            بن
+                            مانو مدل پریسکا 250 گرمی</h4>
+                        <div>
+                            <span class="text-teal-600 text-xs dark:text-emerald-500">14.500 تومان
+                                تخفیف</span>
+                            <div class="text-zinc-700 dark:text-white font-DanaDemiBold">
+                                175,000
+                                <span class="font-Dana text-xs">تومان</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-x-1 mt-5 pb-6 border-b border-b-gray-300 dark:border-b-white/10">
+                    <img src="../public/images/products/p1.png" alt="product image" class="w-[90px] h-[90px]">
+                    <div class="flex flex-col justify-between gap-y-1.5">
+                        <h4 class="font-DanaMedium text-zinc-700 dark:text-white text-xs line-clamp-2">
+                            قهوه اسپرسو
+                            بن
+                            مانو مدل پریسکا 250 گرمی</h4>
+                        <div>
+                            <span class="text-teal-600 text-xs dark:text-emerald-500">14.500 تومان
+                                تخفیف</span>
+                            <div class="text-zinc-700 dark:text-white font-DanaDemiBold">
+                                175,000
+                                <span class="font-Dana text-xs">تومان</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="flex items-start gap-x-6 pt-5">
+                <button class="bg-teal-600 dark:bg-emerald-500 hover:bg-teal-700 text-white 
+                                               w-24 h-11 transition-colors rounded-xl cursor-pointer">ثبت
+                    سفارش</button>
+                <div>
+                    <h4 class="font-DanaMedium text-xs text-gray-300 dark:text-emerald-500 line-clamp-2">
+                        مبلغ قابل پرداخت</h4>
+                    <div class="text-zinc-700 dark:text-white font-DanaDemiBold">
+                        175,000
+                        <span class="font-Dana">تومان</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

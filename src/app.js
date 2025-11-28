@@ -3,8 +3,11 @@ const submenuBtn = document.querySelector(".submenu-btn")
 const submenu = document.querySelector(".submenu")
 const bars3 = document.querySelector(".bars3")
 const offcanv = document.querySelector(".offcanv")
-const overlay = document.querySelector(".overlay")
 const offcanvCloseBtn = document.querySelector(".offcanv-close-btn")
+const shoppingCartIcon = document.querySelector(".shopping-cart-icon")
+const shoppingOffcanv = document.querySelector(".shopping-offcanv")
+const shoppingOffcanvCloseBtn = document.querySelector(".shopping-offcanv-close-btn")
+const overlay = document.querySelector(".overlay")
 
 toggleThemeBtns.forEach(btn => {
     btn.addEventListener("click", function () {
@@ -17,7 +20,6 @@ toggleThemeBtns.forEach(btn => {
         }
     })
 })
-
 
 submenuBtn.addEventListener("click", (event) => {
     event.target.parentElement.classList.toggle("text-orange-300");
@@ -39,5 +41,20 @@ offcanvCloseBtn.addEventListener("click", (event) => {
     overlay.classList.remove("overlay-open");
 
     offcanv.classList.add("-right-64");
+    overlay.classList.add("overlay-close");
+})
+
+shoppingCartIcon.addEventListener("click", event => {
+    shoppingOffcanv.classList.remove("-left-64");
+    overlay.classList.remove("overlay-close");
+
+    shoppingOffcanv.classList.add("left-0");
+    overlay.classList.add("overlay-open");
+})
+shoppingOffcanvCloseBtn.addEventListener("click", event => {
+    shoppingOffcanv.classList.remove("left-0");
+    overlay.classList.remove("overlay-open");
+
+    shoppingOffcanv.classList.add("-left-64");
     overlay.classList.add("overlay-close");
 })
