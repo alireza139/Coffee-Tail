@@ -133,14 +133,20 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
         </symbol>
 
-        <symbol id="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 22" fill="currentColor">
-            <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z" />
+        <symbol id="chevron-left-mini" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+                d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+                clip-rule="evenodd" />
         </symbol>
 
         <symbol id="chevron-down-mini" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
                 d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
                 clip-rule="evenodd" />
+        </symbol>
+
+        <symbol id="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 22" fill="currentColor">
+            <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z" />
         </symbol>
     </svg>
     <!--End Svg sprite -->
@@ -598,9 +604,21 @@
         <!-- End home banner -->
 
         <!-- home products -->
-         <section class="bg-home-products">
-
-         </section>
+        <section class="bg-home-products mt-48">
+            <div class="desktop-container flex justify-between items-end">
+                <div>
+                    <h4 class="header-component-title">جدیدترین محصولات</h4>
+                    <span class="header-component-subtitle">فرآوری شده از دانه قهوه</span>
+                </div>
+                <a href="#" class="header-component-link">
+                    <span class="md:hidden">مشاهده محصولات</span>
+                    <span class="hidden md:block">مشاهده همه محصولات</span>
+                    <svg class="h-5 w-5">
+                        <use href="#chevron-left-mini"></use>
+                    </svg>
+                </a>
+            </div>
+        </section>
         <!-- End home products -->
     </main>
     <!-- End app main -->
