@@ -51,6 +51,18 @@
     .bg-home-desktop {
         background-image: url("../public/images/headerBgDesktop.webp");
     }
+
+    .category-banner-1{
+        background: linear-gradient(rgba(0, 0, 0 , .6)38% , rgba(0, 0, 0, 0.1)) , url("../public/images/categories/category-right.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+      .category-banner-2{
+        background: linear-gradient(rgba(0, 0, 0 , .6)38% , rgba(0, 0, 0, 0.1)) , url("../public/images/categories/category-left.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 /* ------------------ base layer ------------------ */
