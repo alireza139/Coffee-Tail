@@ -2254,7 +2254,8 @@
     <!-- End app main -->
 
     <!-- footer -->
-    <footer class="relative bg-zinc-700 py-8 md:py-11 md:pt-[62px]">
+    <footer class="relative bg-zinc-700 pt-8 md:pt-[62px]">
+        <!-- footer svgs -->
         <svg class="w-[100px] h-[22px] absolute left-0 right-0 top-0 mx-auto text-gray-100 dark:text-zinc-800">
             <use href="#curve-footer"></use>
         </svg>
@@ -2264,7 +2265,10 @@
                 <use href="#chevron-down-mini"></use>
             </svg>
         </div>
-        <div class="flex justify-between flex-wrap lg:w-[90%] px-4 md:px-0 mx-auto text-gray-300">
+
+        <!-- footer content -->
+        <div class="desktop-container flex justify-between flex-wrap lg:w-[90%] px-4 md:px-0 mx-auto text-gray-300 pb-5">
+            <!-- about us -->
             <div class="xl:w-[400px] xl:pl-4">
                 <div class="flex gap-x-5 text-gray-300 mb-6 md:mb-4.5">
                     <svg class="w-[57px] h-[54px]">
@@ -2280,6 +2284,8 @@
                     کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
                 </p>
             </div>
+
+            <!-- queck accessibility -->
             <div class="mt-[26px]">
                 <h4 class="font-DanaDemiBold text-2xl text-white mb-6 md:mb-7">دسترسی سریع</h4>
                 <div class="grid grid-cols-2 h-44 gap-y-2.5 gap-x-8 md:gap-x-10">
@@ -2325,6 +2331,8 @@
                     </a>
                 </div>
             </div>
+
+            <!-- contact us -->
             <div class="mt-[26px]">
                 <h4 class="font-DanaDemiBold text-2xl text-white mb-6 md:mb-7">در تماس باشیم</h4>
                 <div>
@@ -2351,25 +2359,27 @@
                     </div>
                     <div class="flex gap-1.5 md:gap-6 ltr-text font-DanaMedium md:text-xl">
                         <a href="#"
-                            class="flex flex-grow items-center gap-x-2 rounded-xl h-12 border border-orange-200 text-orange-200 px-3">
-                            @golden_coffee
-                            <svg class="w-[26px] h-[26px] md:w-[26px] md:h-[26px]">
-                                <use href="#telegram"></use>
-                            </svg>
-                        </a>
-                        <a href="#"
                             class="flex flex-grow items-center gap-x-2 rounded-xl h-12 text-zinc-700 bg-gradient-to-r from-orange-200 to-orange-300 px-3">
                             @golden_coffee
                             <svg class="w-[26px] h-[26px] md:w-[26px] md:h-[26px]">
                                 <use href="#instagram"></use>
                             </svg>
                         </a>
+                        <a href="#"
+                            class="flex flex-grow items-center gap-x-2 rounded-xl h-12 border border-orange-200 text-orange-200 px-3">
+                            @golden_coffee
+                            <svg class="w-[26px] h-[26px] md:w-[26px] md:h-[26px]">
+                                <use href="#telegram"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flex justify-between items-center font-DanaMedium border-t border-t-white/10 pt-10 text-gray-300">
-            <div>
+
+        <!-- ownership -->
+        <div class="desktop-container flex flex-col md:flex-row md:items-center justify-between font-DanaMedium border-t border-t-white/10 py-2 text-gray-300 text-xs">
+            <div class="flex items-center gap-x-1">
                 <div class="flex items-center justify-center w-[30px] h-[30px] rounded-full border border-white/10">
                     <div class="flex items-center justify-center w-5 h-5 rounded-full border border-white/20">
                         <div class="w-2.5 h-2.5 rounded-full bg-orange-300"></div>
@@ -2377,7 +2387,7 @@
                 </div>
                 <p>تمامی حقوق این وبسایت متعلق به <span class="text-orange-300">Alireza_hr</span> می باشد.</p>
             </div>
-            <p>copyright @ 2026 golden coffee. All rights reserved</p>
+            <p class="ltr-text">copyright @ 2026 golden coffee. All rights reserved</p>
         </div>
     </footer>
     <!-- End footer -->
