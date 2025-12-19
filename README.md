@@ -19,8 +19,8 @@ coffeeTail is a front-end project that provides a clean and minimal base layout 
 
 ## 📦 How to Run
 
-**Install dependencies:**
 ```bash
+# Install dependencies:
 npm i
 
 # Build Tailwind CSS into the final output file
