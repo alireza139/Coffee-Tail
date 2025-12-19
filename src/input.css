@@ -63,6 +63,11 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    .ltr-text{
+        direction: ltr;
+        text-align: left;
+    }
 }
 
 /* ------------------ base layer ------------------ */
