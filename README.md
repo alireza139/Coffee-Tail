@@ -1,48 +1,24 @@
-coffeeTail ☕✨
+# coffeeTail ☕✨
 
 A minimal cafe-themed website built with Tailwind CSS, featuring light and dark mode support.
 
-🌐 Overview
-
+## 🌐 Overview
 coffeeTail is a front-end project that provides a clean and minimal base layout for a cafe website. It is built entirely with Tailwind CSS and includes a responsive design along with a simple light/dark theme toggle.
 
-🚀 Features
+## 🚀 Features
+- 🎨 Minimal, clean design using Tailwind CSS  
+- 🌓 Light Mode & Dark Mode support  
+- 📱 Fully responsive layout  
+- ⚡ Fast and easy to extend  
+- ✨ Great starter template for cafe or beverage shop websites  
 
-🎨 Minimal, clean design using Tailwind CSS
+## 🛠️ Technologies Used
+- HTML5  
+- Tailwind CSS  
+- JavaScript  
 
-🌓 Light Mode & Dark Mode support
+## 📦 How to Run
 
-📱 Fully responsive layout
-
-⚡ Fast and easy to extend
-
-✨ Great starter template for cafe or beverage shop websites
-
-🛠️ Technologies Used
-
-HTML5
-
-Tailwind CSS
-
-JavaScript
-
-How to Run
-
-Clone the repository:
-
+**Clone the repository:**
+```bash
 git clone https://github.com/your-username/coffeeTail.git
-
-
-Navigate into the project directory:
-
-cd coffeeTail
-
-
-Install dependencies:
-
-npm i
-
-
-Build Tailwind CSS:
-
-npm run build
