@@ -250,6 +250,12 @@
   .-right-64 {
     right: calc(var(--spacing) * -64);
   }
+  .-right-70 {
+    right: calc(var(--spacing) * -70);
+  }
+  .-right-80 {
+    right: calc(var(--spacing) * -80);
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -298,8 +304,8 @@
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
-  .mx-5 {
-    margin-inline: calc(var(--spacing) * 5);
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
   }
   .mx-auto {
     margin-inline: auto;
@@ -456,6 +462,12 @@
   .h-\[3px\] {
     height: 3px;
   }
+  .h-\[18px\] {
+    height: 18px;
+  }
+  .h-\[20px\] {
+    height: 20px;
+  }
   .h-\[22px\] {
     height: 22px;
   }
@@ -470,6 +482,9 @@
   }
   .h-\[54px\] {
     height: 54px;
+  }
+  .h-\[60px\] {
+    height: 60px;
   }
   .h-\[70px\] {
     height: 70px;
@@ -488,6 +503,15 @@
   }
   .h-\[250px\] {
     height: 250px;
+  }
+  .h-\[280px\] {
+    height: 280px;
+  }
+  .h-\[300px\] {
+    height: 300px;
+  }
+  .h-auto {
+    height: auto;
   }
   .h-full {
     height: 100%;
@@ -528,11 +552,20 @@
   .w-32 {
     width: calc(var(--spacing) * 32);
   }
+  .w-36 {
+    width: calc(var(--spacing) * 36);
+  }
   .w-52 {
     width: calc(var(--spacing) * 52);
   }
   .w-64 {
     width: calc(var(--spacing) * 64);
+  }
+  .w-\[18px\] {
+    width: 18px;
+  }
+  .w-\[20px\] {
+    width: 20px;
   }
   .w-\[26px\] {
     width: 26px;
@@ -546,8 +579,14 @@
   .w-\[57px\] {
     width: 57px;
   }
+  .w-\[60px\] {
+    width: 60px;
+  }
   .w-\[70px\] {
     width: 70px;
+  }
+  .w-\[80px\] {
+    width: 80px;
   }
   .w-\[87px\] {
     width: 87px;
@@ -570,9 +609,6 @@
   .w-\[138px\] {
     width: 138px;
   }
-  .w-\[144px\] {
-    width: 144px;
-  }
   .w-\[230px\] {
     width: 230px;
   }
@@ -594,9 +630,6 @@
   .max-w-\[210px\] {
     max-width: 210px;
   }
-  .max-w-\[1300px\] {
-    max-width: 1300px;
-  }
   .max-w-\[1350px\] {
     max-width: 1350px;
   }
@@ -610,6 +643,9 @@
     flex-shrink: 0;
   }
   .flex-grow {
+    flex-grow: 1;
+  }
+  .grow {
     flex-grow: 1;
   }
   .border-collapse {
@@ -911,10 +947,6 @@
     @supports (background-image: linear-gradient(in lab, red, red)) {
       --tw-gradient-position: to right in oklab;
     }
-    background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-  .bg-gradient-to-r {
-    --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .from-emerald-500 {
@@ -1231,6 +1263,16 @@
       }
     }
   }
+  .xs\:flex-row {
+    @media (width >= 480px) {
+      flex-direction: row;
+    }
+  }
+  .xs\:items-end {
+    @media (width >= 480px) {
+      align-items: flex-end;
+    }
+  }
   .sm\:grid-cols-3 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1406,6 +1448,11 @@
       height: 98px;
     }
   }
+  .md\:h-\[260px\] {
+    @media (width >= 48rem) {
+      height: 260px;
+    }
+  }
   .md\:h-auto {
     @media (width >= 48rem) {
       height: auto;
@@ -1479,6 +1526,11 @@
   .md\:max-w-\[460px\] {
     @media (width >= 48rem) {
       max-width: 460px;
+    }
+  }
+  .md\:grow {
+    @media (width >= 48rem) {
+      flex-grow: 1;
     }
   }
   .md\:grid-cols-2 {
@@ -1803,6 +1855,11 @@
       color: var(--color-emerald-500);
     }
   }
+  .dark\:text-gray-300 {
+    &:where(.dark *) {
+      color: var(--color-gray-300);
+    }
+  }
   .dark\:text-gray-400 {
     &:where(.dark *) {
       color: var(--color-gray-400);
@@ -1934,37 +1991,35 @@
     text-align: left;
   }
 }
-@layer base {
-  @font-face {
-    font-family: "Dana";
-    src: local("Dana"), url("../public/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana Medium";
-    src: local("Dana Medium"), url("../public/fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana DemiBold";
-    src: local("Dana DemiBold"), url("../public/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Morabba Light";
-    src: local("Morabba Light"), url("../public/fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Morabba Medium";
-    src: local("Morabba Medium"), url("../public/fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Morabba Bold";
-    src: local("Morabba Bold"), url("../public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
-    font-display: swap;
-  }
+@font-face {
+  font-family: "Dana";
+  src: local("Dana"), url("../public/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana Medium";
+  src: local("Dana Medium"), url("../public/fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana DemiBold";
+  src: local("Dana DemiBold"), url("../public/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Morabba Light";
+  src: local("Morabba Light"), url("../public/fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Morabba Medium";
+  src: local("Morabba Medium"), url("../public/fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Morabba Bold";
+  src: local("Morabba Bold"), url("../public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+  font-display: swap;
 }
 @layer components {
   .submenu {
